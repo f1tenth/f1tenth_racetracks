@@ -53,6 +53,5 @@ The original f1 racetrack database was created by Alexander Heilmeier from the I
 Technical University of Munich.
 
 # Related open-source repositories
-* Lap time simulation: https://github.com/TUMFTM/laptime-simulation
-* Race simulation: https://github.com/TUMFTM/race-simulation
-* Formula 1 timing database: https://github.com/TUMFTM/f1-timing-database
+* [F1TENTH Gym](https://github.com/f1tenth/f1tenth_gym)
+* [F1TENTH Simulator](https://github.com/f1tenth/f1tenth_simulator)
