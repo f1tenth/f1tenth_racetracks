@@ -1,6 +1,0 @@
-image: mapNorisring.pgm
-resolution: 0.04347
-origin: [-44.035698998146216,-36.7838902273793, 0.000000]
-negate: 0
-occupied_thresh: 0.45
-free_thresh: 0.196
