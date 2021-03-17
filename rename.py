@@ -33,11 +33,9 @@ for count, mapname in enumerate(os.listdir(directory)):
                 new = directory2 + '/' + mapname + '_centerline.csv'
                 os.renames(old, new)
 
-            elif file_name == mapname + '_map_raceline':
-                removefile = directory2 + '/' + filename2
-                os.remove(removefile)
 
-            elif file_name == mapname + '_map_raceline_newconv':
+
+            elif file_name == mapname + '_raceline_newconv':
                 old = directory2 + '/' + filename2
                 new = directory2 + '/' + mapname + '_raceline.csv'
                 os.renames(old, new)
