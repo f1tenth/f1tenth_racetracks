@@ -47,6 +47,10 @@ The quality of the source data (GPS points and satellite images) varies greatly 
 the quality of the results varies as well. Please bear this in mind and check whether the accuracy is sufficient for the
 desired application.
 
+# Coordinate system conversion
+We also provide a conversion script that transforms the racelines created by optimization to the into the coordinate system used by [F1TENTH Gym](https://github.com/f1tenth/f1tenth_gym). The converted racelines are appened with the *_newconv* tag in the .csv files.
+
+The conversion script is convert.py, and takes one argument ```--pattern``` for the pattern used by glob to find all files matching the pattern. The default pattern is */*raceline.csv/, which correspond to all .csv files that was appended by raceline in the file name.
 
 # Acknowledgement
 The original f1 racetrack database was created by Alexander Heilmeier from the Institute of Automotive Technology at the
