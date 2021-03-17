@@ -12,11 +12,13 @@ for count, mapname in enumerate(os.listdir(directory)):
         continue
     if mapname == 'LICENSE':
         continue
-    if mapname == 'README':
+    if mapname == 'README.md':
         continue
     if mapname == 'rename.py':
         continue
     if mapname == 'convert.py':
+        continue
+    if mapname == '.gitignore':
         continue
     for count2, filename2 in enumerate(os.listdir(directory2)):
         file_name, file_ext = os.path.splitext(filename2)

@@ -1,5 +1,5 @@
 # f1tenth_racetracks
-This repository contains maps from over 20 real race tracks (mainly F1 and DTM) downscaled on 1:10 for the usage in the F1TENTH Gym and F1TENTH Simulator.
+This repository contains maps from over 20 real race tracks (mainly F1 and DTM) downscaled on 1:10 for the usage in the [F1TENTH Gym](https://github.com/f1tenth/f1tenth_gym) and [F1TENTH Simulator](https://github.com/f1tenth/f1tenth_simulator).
 
 
 # Included race tracks
@@ -14,7 +14,6 @@ This repository contains maps from over 20 real race tracks (mainly F1 and DTM) 
 * Montreal, Canada (F1)
 * Monza, Italy (F1)
 * Moscow Raceway, Russia (DTM)
-* Norisring, Germany (DTM)
 * Nuerburgring, Germany (DTM)
 * Oschersleben, Germany (DTM)
 * Sakhir, Bahrain (F1)
@@ -37,18 +36,18 @@ image processing algorithm. Afterwards the data was downscaled 1:10 with a fixed
 used in the F1TENTH environments.
 
 # Content and Data Format
-- maps: The tracks are displayed as occupancy grid maps based on a .pgm or .png file. That maps have a correspondong .yaml file
-that includes both resolution and origin of the maps. These maps can be used in both the F1TENTH Gym and the F1TENTH Simulator.
-- waypoints: [x_m, y_m, w_tr_right_m, w_tr_left_m] These files contain the center line (x, y) and the track widths to the
+- maps: The tracks are displayed as occupancy grid maps based on a .png file. That maps have a corresponding .yaml file
+that includes both resolution and origin of the maps. These maps can be used in both the [F1TENTH Gym](https://github.com/f1tenth/f1tenth_gym) and [F1TENTH Simulator](https://github.com/f1tenth/f1tenth_simulator).
+- centerline: [x_m, y_m, w_tr_right_m, w_tr_left_m] These files contain the center line (x, y) and the track widths to the
 right (w_tr_right) and left (w_tr_left). The center lines were smoothed. Therefore, they do not lie perfectly in the
 middle of the track anymore.
+- raceline: [s_m; x_m; y_m; psi_rad; kappa_radpm; vx_mps; ax_mps2] The provided race lines were calculated minimizing the summed curvature. They lie within the track boundaries. The raceline files contain the s-value along the raceline, the racline positions (x,y,psi) the optimal curvature (kappa), the optimal longitudinal veloctiy (vx) and longitudinal acceleration (ax) for the specific raceline position.
+- waypoints_DonkeySim: This file contains the optimal raceline provided for the usage in the [Donkey Simulator](https://docs.donkeycar.com/guide/simulator/).
 
-The quality of the source data (GPS points and satellite images) varies greatly depending on the location. Accordingly,
-the quality of the results varies as well. Please bear this in mind and check whether the accuracy is sufficient for the
-desired application.
+
 
 # Coordinate system conversion
-We also provide a conversion script that transforms the racelines created by optimization to the into the coordinate system used by [F1TENTH Gym](https://github.com/f1tenth/f1tenth_gym). The converted racelines are appened with the *_newconv* tag in the .csv files.
+The heading in the raceline files is using a coordinate system from 0-2pi. This is mainly for the usage in the F1TENTH gym. If you want to use another coordinate system conversion we also provide a conversion script that transforms the racelines created by optimization to the into the coordinate system used by your simulation.
 
 The conversion script is convert.py, and takes one argument ```--pattern``` for the pattern used by glob to find all files matching the pattern. The default pattern is */*raceline.csv/, which correspond to all .csv files that was appended by raceline in the file name.
 
