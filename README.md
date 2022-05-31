@@ -1,6 +1,18 @@
 # f1tenth_racetracks
 This repository contains maps from over 20 real race tracks (mainly F1 and DTM) downscaled on 1:10 for the usage in the [F1TENTH Gym](https://github.com/f1tenth/f1tenth_gym) and [F1TENTH Simulator](https://github.com/f1tenth/f1tenth_simulator).
 
+# Paper Reference
+The collected research papers in this repository were used to create the paper ["Autonomous Vehicles on the Edge: A survey on autonomous racing"](https://arxiv.org/abs/2202.07008). If you find the information in this respository useful we would be happy if you cite it based on the following definition:
+
+```
+  @misc{2202.07008,
+    Author = {Johannes Betz and Hongrui Zheng and Alexander Liniger and Ugo Rosolia and Phillip Karle and Madhur Behl and Venkat Krovi and Rahul Mangharam},
+    Title = {Autonomous Vehicles on the Edge: A Survey on Autonomous Vehicle Racing},
+    Year = {2022},
+    Eprint = {arXiv:2202.07008},
+    }
+```
+
 
 # Included race tracks
 * Austin, USA (F1)
