@@ -2,7 +2,7 @@
 This repository contains maps from over 20 real race tracks (mainly F1 and DTM) downscaled on 1:10 for the usage in the [F1TENTH Gym](https://github.com/f1tenth/f1tenth_gym) and [F1TENTH Simulator](https://github.com/f1tenth/f1tenth_simulator).
 
 # Paper Reference
-The collected research papers in this repository were used to create the paper ["Autonomous Vehicles on the Edge: A survey on autonomous racing"](https://arxiv.org/abs/2202.07008). If you find the information in this respository useful we would be happy if you cite it based on the following definition:
+The content of this repository was used to create the paper ["Autonomous Vehicles on the Edge: A survey on autonomous racing"](https://arxiv.org/abs/2202.07008). If you find the information in this respository useful we would be happy if you cite it based on the following definition:
 
 ```
   @misc{2202.07008,
